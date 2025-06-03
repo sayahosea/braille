@@ -1,4 +1,4 @@
-import { Eta } from 'eta';
+import { Eta } from 'npm:eta';
 import { randomBytes, randomUUID } from 'node:crypto';
 import { Buffer } from 'node:buffer';
 import Argon2id from "jsr:@rabbit-company/argon2id";
