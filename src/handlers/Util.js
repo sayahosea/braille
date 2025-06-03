@@ -7,7 +7,7 @@ import * as path from 'jsr:@std/path/posix';
 
 
 const eta = new Eta({
-	views: path.join(Deno.cwd(), '/src/pages')
+	views: path.join(Deno.cwd(), '/pages')
 });
 
 
