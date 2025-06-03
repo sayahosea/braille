@@ -35,7 +35,7 @@ jobs:
         uses: denoland/deployctl@v1
         with:
           project: "braille"
-          entrypoint: "src/main.js"
+          entrypoint: "main.js"
           root: "src"
           
           
