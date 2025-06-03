@@ -37,8 +37,5 @@ jobs:
           project: "braille"
           entrypoint: "main.js"
           root: "src"
-
-      - name: Run Deno script
-        run: deno run --allow-net --allow-read --allow-env src/main.js
           
           
