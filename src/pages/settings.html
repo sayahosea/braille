@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Settings</title>
+		<link rel="icon" type="image/x-icon" href="/favicon.ico">
+		<link rel="stylesheet" type="text/css" href="/static/style.css">
+	</head>
+	<body>
+		<nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+			<div class="navbar-brand">
+				<a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="main-navbar">
+					<span aria-hidden="true"></span>
+					<span aria-hidden="true"></span>
+					<span aria-hidden="true"></span>
+					<span aria-hidden="true"></span>
+				</a>
+			</div>
+			<div id="main-navbar" class="navbar-menu">
+				<div class="navbar-start">
+					<a href="/" class="navbar-item">Home</a>
+					<a href="/dashboard" class="navbar-item">Dashboard</a>
+				</div>
+				<div class="navbar-end">
+					<a href="/logout" class="navbar-item">Log Out</a>
+				</div>
+			</div>
+		</nav>
+
+		<section class="hero is-fullheight-with-navbar">
+			<div class="hero-body">
+				<div class="container">
+					<div class="box">
+						<h1 class="is-size-1">Settings</h1>
+					</div>
+
+					<div class="columns is-multiline">
+						<div class="column is-one-third-desktop is-half-tablet">
+							<article id="msg" class="message is-info is-hidden">
+								<div id="message" class="message-body"></div>
+							</article>
+						</div>
+					</div>
+
+					<div class="columns is-multiline">
+						<div class="column is-one-third-desktop is-half-tablet">
+							<div class="box">
+								<h2 class="is-size-4 mb-5">Change Password</h2>
+								<input class="input" type="password" minlength=3 maxlength=32 id="password" placeholder="New Password">
+								<button id="change-password" class="button is-dark is-fullwidth mt-2">Change Password</button>
+							</div>
+						</div>
+						<div class="column is-one-third-desktop is-half-tablet">
+							<div class="box">
+								<h2 class="is-size-4 mb-5">Change Username</h2>
+								<input class="input" type="text" minlength=3 maxlength=16 id="username" placeholder="New Username">
+								<button id="change-username" class="button is-dark is-fullwidth mt-2">Change Username</button>
+							</div>
+						</div>
+						<div class="column is-one-third-desktop is-half-tablet">
+							<div class="box">
+								<h2 class="is-size-4 mb-5">Delete Account</h2>
+								<input class="input" type="text" id="confirm" minlength=3 maxlength=3 placeholder="Type 'YES' to confirm">
+								<button id="delete-account" class="button is-dark is-fullwidth mt-2">Confirm</button>
+							</div>
+						</div>
+						<div class="column is-one-third-desktop is-half-tablet">
+							<div class="box">
+								<h2 class="is-size-4 mb-2">Log out from all devices, except this device of course.</h2>
+								<button id="logout-devices" class="button is-dark is-fullwidth">Confirm</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<script type="text/javascript" src="/static/js/settings.js"></script>
+	</body>
+</html>

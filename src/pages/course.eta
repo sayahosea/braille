@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title><%= it.title %> Course</title>
+		<link rel="icon" type="image/x-icon" href="/favicon.ico">
+		<link rel="stylesheet" type="text/css" href="/static/style.css">
+	</head>
+	<body>
+		<nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+			<div class="navbar-brand">
+				<a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="main-navbar">
+					<span aria-hidden="true"></span>
+					<span aria-hidden="true"></span>
+					<span aria-hidden="true"></span>
+					<span aria-hidden="true"></span>
+				</a>
+			</div>
+			<div id="main-navbar" class="navbar-menu">
+				<div class="navbar-start">
+					<a href="/" class="navbar-item">Home</a>
+					<a href="/dashboard" class="navbar-item">Dashboard</a>
+				</div>
+				<div class="navbar-end">
+					<a href="/settings" class="navbar-item">Settings</a>
+					<a href="/logout" class="navbar-item">Log Out</a>
+				</div>
+			</div>
+		</nav>
+
+		<section class="hero is-fullheight-with-navbar">
+			<div class="hero-body">
+				<div class="container">
+					<div id="messages" class="columns is-centered">
+						<div class="column is-one-third">
+							<div>
+								<article class="message is-link" id="info-msg">
+									<div class="message-body">
+										<p>Click the right answer :]</p>
+									</div>
+								</article>
+							</div>
+							<div>
+								<article class="message is-danger is-hidden" id="error-msg">
+									<div class="message-body">
+										<p></p>
+									</div>
+								</article>
+							</div>
+						</div>
+					</div>
+					<div id="finish" class="has-text-centered mb-2 is-hidden">
+						<p class="is-size-4">Yay! You did it! <3</p>
+						<a class="button is-dark" href="/courses/<%= it.type %>?id=<%= it.courseId %>">Repeat</a>
+						<% if (!it.nextCourse) { %>
+							<a class="button is-dark" href="/dashboard">Change Course</a>
+						<% } else { %>
+							<a class="button is-dark" href="/courses/<%= it.type %>?id=<%= it.nextCourse %>">Next Course</a>
+						<% } %>
+					</div>
+					<div id="quiz" data-course-type="<%= it.type %>" data-course-id="<%= it.courseId %>" class="columns is-multiline mt-2 is-centered">
+
+						<%~ it.quizzesInHTML %>
+
+					</div>
+				</div>
+			</div>
+		</section>
+		<script type="text/javascript" src="/static/js/course.js"></script>
+	</body>
+</html>

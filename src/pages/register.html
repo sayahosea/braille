@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Register</title>
+		<link rel="icon" type="image/x-icon" href="/favicon.ico">
+		<link rel="stylesheet" type="text/css" href="/static/style.css">
+	</head>
+	<body id="main">
+		<nav class="navbar is-dark">
+			<div id="main-navbar" class="navbar-menu">
+				<div class="navbar-start">
+					<a class="navbar-item" href="/">Home</a>
+					<a class="navbar-item" href="/login">Log In</a>
+				</div>
+			</div>
+		</nav>
+		<section class="hero is-fullheight-with-navbar">
+			<div class="hero-body">
+				<div class="container">
+					<div class="columns">
+						<div class="column is-two-fifths">
+							<article class="message is-dark">
+								<div class="message-body">Username can only use uppercase, lowercase letters, numbers, and underscores.<br>The minimum lengths for usernames and passwords are 3 characters.</div>
+							</article>
+
+							<h1 class="is-size-1 is-text-centered">Register</h1>
+
+							<p class="is-size-5">Username</p>
+							<input id="username" class="input" type="text" minlength=3 maxlength=16 placeholder="Max 16 characters, no spaces" required>
+
+							<p class="is-size-5 mt-4">Password</p>
+							<input id="password" class="input" type="password" minlength=3 maxlength=32 placeholder="Max 32 characters" required>
+
+							<article id="error" class="message is-danger mt-5 is-hidden">
+								<div id="error-message" class="message-body"></div>
+							</article>
+
+							<button id="submit" class="button is-dark is-fullwidth mt-5">Register</button>
+
+							<article class="message is-dark mt-5">
+								<div class="message-body"><a href="/privacy">Click here to read Privacy Policy</a>.</div>
+							</article>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<script type="text/javascript" src="/static/js/register.js"></script>
+	</body>
+</html>

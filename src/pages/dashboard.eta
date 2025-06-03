@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Dashboard</title>
+		<link rel="icon" type="image/x-icon" href="/favicon.ico">
+		<link rel="stylesheet" type="text/css" href="/static/style.css">
+	</head>
+	<body>
+		<nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+			<div class="navbar-brand">
+				<a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="main-navbar">
+					<span aria-hidden="true"></span>
+					<span aria-hidden="true"></span>
+					<span aria-hidden="true"></span>
+					<span aria-hidden="true"></span>
+				</a>
+			</div>
+			<div id="main-navbar" class="navbar-menu">
+				<div class="navbar-start">
+					<a href="/" class="navbar-item">Home</a>
+				</div>
+				<div class="navbar-end">
+					<a href="/settings" class="navbar-item">Settings</a>
+					<a href="/logout" class="navbar-item">Log Out</a>
+				</div>
+			</div>
+		</nav>
+
+		<section class="hero is-fullheight-with-navbar">
+			<div class="hero-body">
+				<div class="container">
+					<div class="box">
+						<h1 class="is-size-1">Hello, <%= it.username %>.</h1>
+						<p class="subtitle">What are you going to learn today?</p>
+					</div>
+
+					<div class="columns">
+						<div class="column">
+							<div class="box">
+								<h2 class="is-size-3">Letters</h2>
+								<a class="button is-dark is-fullwidth" href="/courses/letters">View Courses</a>
+							</div>
+						</div>
+						<div class="column">
+							<div class="box">
+								<h2 class="is-size-3">Numbers</h2>
+								<a class="button is-dark is-fullwidth" href="/courses/numbers">View Courses</a>
+							</div>
+						</div>
+						<div class="column">
+							<div class="box">
+								<h2 class="is-size-3">Number Sign</h2>
+								<a class="button is-dark is-fullwidth" href="/courses/number-sign">View Courses</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Learn Braille</title>
+		<link rel="icon" type="image/x-icon" href="/favicon.ico">
+		<link rel="stylesheet" type="text/css" href="/static/style.css">
+	</head>
+	<body class="hero is-fullheight">
+		<div class="hero-body">
+			<div class="container">
+				<h1 class="is-size-1">Learn Braille</h1>
+				<p class="is-size-3">No email or confirmation required.<br>Only username and password.</p>
+				<p class="buttons">
+					<% if (!it.loggedIn) { %>
+					<a class="button is-dark mt-2" href="/register">Register (less than 30 seconds)</a> <a class="button is-dark mt-2" href="/login">Login</a>
+					<% } else { %>
+					<a class="button is-dark mt-2" href="/dashboard">Dashboard</a>
+					<% } %>
+				</p>
+				<p class="is-size-3 mt-6">Note: This website is intended for users with sufficient eyesight to see the website content clearly.</p>
+			</div>
+		</div>
+	</body>
+</html>
