@@ -1,8 +1,14 @@
-<!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="title" content="Learn Braille | No Ads No Email">
+		<meta name="description" content="Learn braille with easy registration and privacy-friendly website. There is no ads or trackers. Register without email and without captcha.">
+		<meta name="keywords" content="learn,braille,privacy">
+		<meta name="robots" content="index, nofollow">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="language" content="English">
+
 		<title>Learn Braille</title>
 		<link rel="icon" type="image/x-icon" href="/favicon.ico">
 		<link rel="stylesheet" type="text/css" href="/static/style.css">
