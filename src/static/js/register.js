@@ -1,5 +1,27 @@
 const el = (name) => document.getElementById(name);
 
+
+
+document.addEventListener('DOMContentLoaded', async() => {
+	loadNavbarBurger();
+});
+
+// load navbar burger for mobile
+function loadNavbarBurger() {
+	const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+	$navbarBurgers.forEach( el => {
+		el.addEventListener('click', () => {
+			const target = el.dataset.target;
+			const $target = document.getElementById(target);
+
+			el.classList.toggle('is-active');
+			$target.classList.toggle('is-active');
+		});
+	});
+}
+
+
+
 const error = (message) => {
 	el("error").classList.remove("is-hidden");
 	el("error-message").innerHTML = message;

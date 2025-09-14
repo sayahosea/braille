@@ -1,0 +1,19 @@
+<nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+	<a role="button" class="navbar-burger" data-target="main-navbar" aria-label="menu" aria-expanded="false">
+		<span aria-hidden="true"></span>
+		<span aria-hidden="true"></span>
+		<span aria-hidden="true"></span>
+		<span aria-hidden="true"></span>
+	</a>
+
+	<div id="main-navbar" class="navbar-menu">
+		<div class="navbar-start">
+			<a class="navbar-item" href="/">Home</a>
+			<a class="navbar-item" href="/dashboard">Dashboard</a>
+		</div>
+		<div class="navbar-end">
+			<a class="navbar-item" href="/settings">Settings</a>
+			<a class="navbar-item" href="/logout">Logout</a>
+		</div>
+	</div>
+</nav>

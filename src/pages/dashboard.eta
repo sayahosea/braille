@@ -8,25 +8,7 @@
 		<link rel="stylesheet" type="text/css" href="/static/style.css">
 	</head>
 	<body>
-		<nav class="navbar is-dark" role="navigation" aria-label="main navigation">
-			<div class="navbar-brand">
-				<a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="main-navbar">
-					<span aria-hidden="true"></span>
-					<span aria-hidden="true"></span>
-					<span aria-hidden="true"></span>
-					<span aria-hidden="true"></span>
-				</a>
-			</div>
-			<div id="main-navbar" class="navbar-menu">
-				<div class="navbar-start">
-					<a href="/" class="navbar-item">Home</a>
-				</div>
-				<div class="navbar-end">
-					<a href="/settings" class="navbar-item">Settings</a>
-					<a href="/logout" class="navbar-item">Log Out</a>
-				</div>
-			</div>
-		</nav>
+		<%~ include('./layouts/member-header') %>
 
 		<section class="hero is-fullheight-with-navbar">
 			<div class="hero-body">
@@ -59,5 +41,6 @@
 				</div>
 			</div>
 		</section>
+		<script type="text/javascript" src="/static/js/navbar.js"></script>
 	</body>
 </html>

@@ -16,16 +16,16 @@
 	<body class="hero is-fullheight">
 		<div class="hero-body">
 			<div class="container">
-				<h1 class="is-size-1">Learn Braille</h1>
-				<p class="is-size-3">No email or confirmation required.<br>Only username and password.</p>
+				<h1 class="is-size-1 is-size-2-mobile">Learn Braille</h1>
+				<p class="is-size-3 is-size-4-mobile">No email or confirmation required.<br>Only username and password.</p>
 				<p class="buttons">
 					<% if (!it.loggedIn) { %>
-					<a class="button is-dark mt-2" href="/register">Register (less than 30 seconds)</a> <a class="button is-dark mt-2" href="/login">Login</a>
+					<a class="button is-dark mt-2" href="/register">Register</a> <a class="button is-dark mt-2" href="/login">Login</a>
 					<% } else { %>
 					<a class="button is-dark mt-2" href="/dashboard">Dashboard</a>
 					<% } %>
 				</p>
-				<p class="is-size-3 mt-6">Note: This website is intended for users with sufficient eyesight to see the website content clearly.</p>
+				<p class="is-size-3 is-size-4-mobile mt-6">Note: This website is intended for users with sufficient eyesight to see the website content clearly.</p>
 			</div>
 		</div>
 	</body>

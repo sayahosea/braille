@@ -31,13 +31,13 @@ const app = new Hono()
 })
 
 .get('/register', async(c) => {
-	return c.html(util.html('register'));
+	return c.html(util.render('register'));
 })
 .get('/login', async(c) => {
-	return c.html(util.html('login'));
+	return c.html(util.render('login'));
 })
 .get('/privacy', async(c) => {
-	return c.html(util.html('privacy'));
+	return c.html(util.render('privacy'));
 })
 
 .get('/dashboard', async(c) => {

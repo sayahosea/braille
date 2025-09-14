@@ -1,7 +1,7 @@
-import { Eta } from 'eta';
+import { Eta } from 'jsr:@eta-dev/eta';
 import { randomBytes, randomUUID } from 'node:crypto';
 import { Buffer } from 'node:buffer';
-import Argon2id from "jsr:@rabbit-company/argon2id";
+import { hash, verify, Variant } from "jsr:@felix/argon2";
 import * as path from 'jsr:@std/path/posix';
 
 
@@ -44,17 +44,18 @@ export const validateBody = (required, body) => {
 export const password = {
 
 	hash: async(plainPassword) => {
-		return await Argon2id.hashEncoded(
-			plainPassword,
-			Argon2id.randomSalt(),
-			1,		// Parallelism Factor
-			19456,	// Memory Cost
-			2		// Iterations
-		);
+		const salt = crypto.getRandomValues(new Uint8Array(20));
+
+		return await hash(plainPassword, {
+			variant: Variant.Argon2id,
+			memoryCost: 19456,
+			timeCost: 2,
+			salt
+		});
 	},
 
 	verify: async(hash, plainPassword) => {
-		return await Argon2id.verify(hash, plainPassword);
+		return await verify(hash, plainPassword);
 	}
 
 }

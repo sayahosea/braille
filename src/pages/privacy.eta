@@ -8,15 +8,8 @@
 		<link rel="stylesheet" type="text/css" href="/static/style.css">
 	</head>
 	<body>
-		<nav class="navbar is-dark">
-			<div id="main-navbar" class="navbar-menu">
-				<div class="navbar-start">
-					<a class="navbar-item" href="/">Home</a>
-					<a class="navbar-item" href="/register">Register</a>
-					<a class="navbar-item" href="/login">Log In</a>
-				</div>
-			</div>
-		</nav>
+		<%~ include('./layouts/guest-header') %>
+
 		<section class="hero is-fullheight-with-navbar">
 			<div class="hero-body">
 				<div class="container">
@@ -49,5 +42,6 @@
 				</div>
 			</div>
 		</section>
+		<script type="text/javascript" src="/static/js/navbar.js"></script>
 	</body>
 </html>

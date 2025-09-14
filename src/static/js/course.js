@@ -1,5 +1,27 @@
 const el = (id) => document.getElementById(id);
 
+
+
+document.addEventListener('DOMContentLoaded', async() => {
+	loadNavbarBurger();
+});
+
+// load navbar burger for mobile
+function loadNavbarBurger() {
+	const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+	$navbarBurgers.forEach( el => {
+		el.addEventListener('click', () => {
+			const target = el.dataset.target;
+			const $target = document.getElementById(target);
+
+			el.classList.toggle('is-active');
+			$target.classList.toggle('is-active');
+		});
+	});
+}
+
+
+
 const messages = {
 	root: el("messages"),
 	info: el("info-msg"),

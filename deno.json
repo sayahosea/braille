@@ -1,13 +1,13 @@
 {
 	"tasks": {
-		"dev": "deno run --allow-net --allow-read --allow-env --watch src/main.js",
-		"start": "deno run --allow-net --allow-read --allow-env src/main.js"
+		"dev": "deno run --allow-net --allow-read --allow-write --allow-env --allow-ffi --watch src/main.js",
+		"start": "deno run --allow-net --allow-read --allow-write --allow-ffi --allow-env src/main.js"
 	},
 	"imports": {
 		"@db/postgres": "jsr:@db/postgres@^0.19.5",
-		"@rabbit-company/argon2id": "jsr:@rabbit-company/argon2id@^2.1.0",
+		"@eta-dev/eta": "jsr:@eta-dev/eta@^3.5.0",
+		"@felix/argon2": "jsr:@felix/argon2@^3.0.2",
 		"@std/path": "jsr:@std/path@^1.1.0",
-		"eta": "npm:eta@^3.5.0",
 		"hono": "npm:hono@^4.8.3"
 	}
 }
