@@ -1,17 +1,14 @@
 import { Eta } from 'jsr:@eta-dev/eta';
 import { randomBytes, randomUUID } from 'node:crypto';
 import { Buffer } from 'node:buffer';
-import { hash, verify, Variant } from "jsr:@felix/argon2";
+import { hash, verify, Variant } from 'jsr:@felix/argon2';
 import * as path from 'jsr:@std/path/posix';
-
-
 
 const eta = new Eta({
 	views: path.join(Deno.cwd(), '/src/pages')
 });
 
 
-export const courses = [ 'letters', 'number-sign', 'numbers' ];
 
 export const render = (fileName, args) => {
 	return eta.render(fileName, args);
@@ -23,7 +20,7 @@ export const html = async(fileName) => {
 }
 
 export const error = (message) => {
-	return render("error", { message });
+	return render('error', { message });
 }
 
 export const validateBody = (required, body) => {

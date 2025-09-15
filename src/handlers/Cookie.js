@@ -2,7 +2,7 @@ import {
 	getSignedCookie,
 	setSignedCookie,
 	deleteCookie
-} from "npm:hono/cookie";
+} from 'npm:hono/cookie';
 
 const secret = Deno.env.get('COOKIE_SECRET');
 
