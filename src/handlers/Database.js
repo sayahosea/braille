@@ -22,10 +22,6 @@ export const getConn = async() => {
 export const init = async() => {
 	await createTables();
 
-	setInterval(() => {
-		console.log(`Connections: ${pool.available}/${pool.size}`)
-	}, 2000);
-
 	Deno.addSignalListener('SIGINT', async() => {
 		await pool.end();
 		console.log('Closing database connections...');
