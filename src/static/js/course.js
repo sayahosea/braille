@@ -24,7 +24,6 @@ function loadNavbarBurger() {
 
 const messages = {
 	root: el("messages"),
-	info: el("info-msg"),
 	error: el("error-msg"),
 };
 

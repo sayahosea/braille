@@ -6,7 +6,7 @@ import * as util from './handlers/Util.js';
 import * as cookie from './handlers/Cookie.js';
 import * as db from './handlers/Database.js';
 import Routes from './handlers/Routes.js';
-import Auth from './handlers/Auth.js';
+import AuthPlugin from './handlers/AuthPlugin.js';
 
 import API from './routers/API.js';
 import Courses from './routers/Courses.js';
@@ -18,7 +18,7 @@ await db.init();
 const app = new Hono()
 .use('/static/*', serveStatic({ root: './src' }))
 .get('/favicon.ico', serveStatic({ path: './src/static/favicon.ico' }))
-.use(async (c, next) => Auth(c, next))
+.use(async (c, next) => AuthPlugin(c, next))
 
 .route('/api', API)
 .route('/courses', Courses)
@@ -50,5 +50,10 @@ const app = new Hono()
 
 
 
-const port = parseInt(process.env.PORT) || 3000;
-Deno.serve({ port }, app.fetch);
+try {
+	const port = parseInt(process.env.PORT) || 3000;
+	Deno.serve({ port }, app.fetch);
+} catch(err) {
+	console.error(err);
+	process.exit(1);
+}

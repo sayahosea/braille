@@ -15,24 +15,15 @@
 				<div class="container">
 					<div id="messages" class="columns is-centered">
 						<div class="column is-one-third">
-							<div>
-								<article class="message is-link" id="info-msg">
-									<div class="message-body">
-										<p>Click the right answer :]</p>
-									</div>
-								</article>
-							</div>
-							<div>
-								<article class="message is-danger is-hidden" id="error-msg">
-									<div class="message-body">
-										<p></p>
-									</div>
-								</article>
-							</div>
+							<article class="message is-danger is-hidden" id="error-msg">
+								<div class="message-body">
+									<p></p>
+								</div>
+							</article>
 						</div>
 					</div>
 					<div id="finish" class="has-text-centered mb-2 is-hidden">
-						<p class="is-size-4">Yay! You did it! <3</p>
+						<p class="is-size-4">Yay! You did it!</p>
 						<a class="button is-dark" href="/courses/<%= it.type %>?id=<%= it.courseId %>">Repeat</a>
 						<% if (!it.nextCourse) { %>
 							<a class="button is-dark" href="/dashboard">Change Course</a>

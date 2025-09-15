@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Error :[</title>
+		<title>Error</title>
 		<link rel="icon" type="image/x-icon" href="/favicon.ico">
 		<link rel="stylesheet" type="text/css" href="/static/style.css">
 	</head>
@@ -11,7 +11,7 @@
 		<section class="hero is-fullheight">
 			<div class="hero-body">
 				<div class="container">
-					<h1 class="is-size-1">error :[</h1>
+					<h1 class="is-size-1">Error.</h1>
 					<p class="is-size-3"><%= it.message %></p>
 					<a class="button is-dark mt-4" href="/dashboard">Dashboard</a>
 				</div>

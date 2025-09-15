@@ -1,14 +1,12 @@
-import { get as client } from '../handlers/Database.js';
-
-export const create = async(sessionId, accountId) => {
-	const res = await client().queryArray(
+export const create = async(conn, sessionId, accountId) => {
+	const res = await conn.queryArray(
 		'INSERT INTO sessions(id, account_id) VALUES($1, $2);',
 		[sessionId, accountId]
 	);
 }
 
-export const get = async(sessionId) => {
-	const result = await client().queryArray(
+export const get = async(conn, sessionId) => {
+	const result = await conn.queryArray(
 		'SELECT account_id FROM sessions WHERE id = $1;',
 		[sessionId]
 	);
@@ -17,15 +15,15 @@ export const get = async(sessionId) => {
 
 export const erase = {
 
-	thisDevice: async(sessionId) => {
-		await client().queryArray(
+	thisDevice: async(conn, sessionId) => {
+		await conn.queryArray(
 			'DELETE FROM sessions WHERE id = $1;',
 			[sessionId]
 		);
 	},
 
-	allDevices: async(accountId, sessionId) => {
-		await client().queryArray(
+	allDevices: async(conn, accountId, sessionId) => {
+		await conn.queryArray(
 			'DELETE FROM sessions WHERE account_id = $1 AND id != $2',
 			[accountId, sessionId]
 		);

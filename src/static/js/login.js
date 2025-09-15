@@ -1,4 +1,4 @@
-const el = (name) => document.getElementById(name);
+const el = (id) => document.getElementById(id);
 
 
 

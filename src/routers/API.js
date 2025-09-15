@@ -21,4 +21,4 @@ export default new Hono()
 .delete('/account/delete-account', (c) => deleteAccount(c, util, cookie, db))
 .delete('/account/logout-devices', (c) => logoutDevices(c, util, cookie, db))
 
-.post('/quiz/validate', (c) => validate(c, util, cookie, db))
+.post('/quiz/validate', (c) => validate(c, util, db))

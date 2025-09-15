@@ -1,7 +1,5 @@
-import { get as client } from '../handlers/Database.js';
-
-export const create = async(username, hashedPassword) => {
-	const result = await client().queryArray(
+export const create = async(conn, username, hashedPassword) => {
+	const result = await conn.queryArray(
 		'INSERT INTO accounts(username, password) VALUES($1, $2) RETURNING id;',
 		[username, hashedPassword]
 	);
@@ -10,16 +8,16 @@ export const create = async(username, hashedPassword) => {
 
 export const get = {
 
-	byId: async(id) => {
-		const result = await client().queryObject(
+	byId: async(conn, id) => {
+		const result = await conn.queryObject(
 			'SELECT * FROM accounts WHERE id = $1;',
 			[id]
 		);
 		return result.rows[0] ?? undefined;
 	},
 
-	byUsername: async(username) => {
-		const result = await client().queryObject(
+	byUsername: async(conn, username) => {
+		const result = await conn.queryObject(
 			'SELECT * FROM accounts WHERE username = $1;',
 			[username]
 		);
@@ -30,15 +28,15 @@ export const get = {
 
 export const update = {
 
-	password: async(newPassword, accountId) => {
-		await client().queryArray(
+	password: async(conn, newPassword, accountId) => {
+		await conn.queryArray(
 			'UPDATE accounts SET password = $1 WHERE id = $2;',
 			[newPassword, accountId]
 		);
 	},
 
-	username: async(newUsername, accountId) => {
-		await client().queryArray(
+	username: async(conn, newUsername, accountId) => {
+		await conn.queryArray(
 			'UPDATE accounts SET username = $1 WHERE id = $2;',
 			[newUsername, accountId]
 		);
@@ -46,8 +44,8 @@ export const update = {
 
 }
 
-export const erase = async(accountId) => {
-	await client().queryArray(
+export const erase = async(conn, accountId) => {
+	await conn.queryArray(
 		'DELETE FROM accounts WHERE id = $1;',
 		[accountId]
 	);
