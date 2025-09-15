@@ -11,7 +11,7 @@ const eta = new Eta({
 });
 
 
-export const courses = ["letters", "number-sign", "numbers"];
+export const courses = [ 'letters', 'number-sign', 'numbers' ];
 
 export const render = (fileName, args) => {
 	return eta.render(fileName, args);

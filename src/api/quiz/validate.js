@@ -8,8 +8,9 @@ export default async(c, util, db) => {
 	try {
 		const body = await c.req.json();
 
-		const bodyValid = util.validateBody(required, Object.keys(body));
-		if (!bodyValid) return error(c, { error: 'body request is not valid :[' });
+		if (!util.validate.body(required, Object.keys(body))) {
+			return error(c, 'Invalid body request.');
+		}
 
 		let { courseType, courseId } = body;
 		const submittedAnswers = body.answers;
@@ -26,11 +27,10 @@ export default async(c, util, db) => {
 			return error(c, { error: 'Invalid body request.' });
 		}
 
-		if (!util.courses.includes(courseType)) {
-			return error(c, { error: 'Invalid course type.' });
-		}
+		const courseInfo = Courses.get(courseType);
+		if (!courseInfo) return error(c, { error: 'Invalid course type.' });
 
-		const { courses } = Courses.get(courseType);
+		const { courses } = courseInfo;
 
 		courseId = Number(courseId);
 		if (isNaN(courseId)) return error(c, { error: 'Invalid course id.' });
@@ -62,7 +62,7 @@ export default async(c, util, db) => {
 				break;
 			}
 
-			let questionId = key.replace(prefix, "");
+			let questionId = key.replace(prefix, '');
 			answers.push({ id: questionId, value: submittedAnswers[key] });
 		}
 
