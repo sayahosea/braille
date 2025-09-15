@@ -43,12 +43,13 @@ export default async(c, next) => {
 
 			c.account = account;
 		}
+
+		await next();
 	} catch(err) {
 		console.error(err);
 		if (conn) conn.release();
 		process.exit(1);
 	} finally {
 		if (conn) conn.release();
-		await next();
 	}
 }
