@@ -16,6 +16,10 @@ export default async(c, util, db) => {
 		}
 
 		conn = await db.getConn();
+
+		const takenUsername = await db.account.get.byUsername(conn, username);
+		if (takenUsername) return error(c, 'This username is already taken.');
+
 		await db.account.update.username(conn, username, c.account.id);
 
 		return c.text('Your username has been changed', 200);
@@ -26,4 +30,8 @@ export default async(c, util, db) => {
 	} finally {
 		if (conn) conn.release();
 	}
+}
+
+function error(c, text) {
+	return c.text(text, 400);
 }
