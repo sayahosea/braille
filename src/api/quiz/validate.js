@@ -30,15 +30,11 @@ export default async(c, util, db) => {
 			return error(c, { error: 'Invalid course type.' });
 		}
 
-
-
 		const { courses } = Courses.get(courseType);
 
 		courseId = Number(courseId);
 		if (isNaN(courseId)) return error(c, { error: 'Invalid course id.' });
 		if (courseId > courses.length || courseId < 1) return error(c, { error: 'Course not found.' });
-
-
 
 		// check if the user has access to validate the course
 		const accountId = c.account.id;

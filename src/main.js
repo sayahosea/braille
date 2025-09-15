@@ -30,23 +30,17 @@ const app = new Hono()
 	return Routes.logout(c, util, db, cookie);
 })
 
-.get('/register', async(c) => {
-	return c.html(util.render('register'));
-})
-.get('/login', async(c) => {
-	return c.html(util.render('login'));
-})
-.get('/privacy', async(c) => {
-	return c.html(util.render('privacy'));
-})
+.get('/register', async(c) => c.html(util.render('register')))
+
+.get('/login', async(c) => c.html(util.render('login')))
+
+.get('/privacy', async(c) => c.html(util.render('privacy')))
 
 .get('/dashboard', async(c) => {
-	return Routes.dashboard(c, util, cookie, db);
+	return Routes.dashboard(c, util);
 })
 
-.get('/settings', async(c) => {
-	return Routes.settings(c, util, cookie, db);
-})
+.get('/settings', (c) => c.html(util.render('settings')));
 
 
 

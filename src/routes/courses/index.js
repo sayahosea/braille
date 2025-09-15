@@ -1,7 +1,7 @@
 import start from './start.js';
 import * as Courses from '../../handlers/Courses.js';
 
-export default async(c, util, cookie, db) => {
+export default async(c, util, db, cookie) => {
 	let conn;
 
 	try {
@@ -11,9 +11,7 @@ export default async(c, util, cookie, db) => {
 		if (!courseInfo) return error(c, util.error, 'Course not found.');
 
 		const courseId = c.req.query('id');
-		if (courseId) return await start({ c, util, db, courseInfo });
-
-
+		if (courseId) return await start(c, util, db, courseInfo);
 
 		const accId = c.account.id;
 

@@ -7,4 +7,4 @@ import * as db from '../handlers/Database.js';
 import index from '../routes/courses/index.js';
 
 export default new Hono()
-.get('/:courseType', (c) => index(c, util, cookie, db))
+.get('/:courseType', (c) => index(c, util, db, cookie))

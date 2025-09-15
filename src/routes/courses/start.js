@@ -1,4 +1,4 @@
-export default async({ c, util, db, courseInfo }) => {
+export default async(c, util, db, courseInfo) => {
 	let conn;
 
 	try {
