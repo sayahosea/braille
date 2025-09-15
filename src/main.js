@@ -27,7 +27,7 @@ const app = new Hono()
 	return Routes.index(c, util, cookie);
 })
 .get('/logout', async(c) => {
-	return Routes.logout(c, util, cookie, db);
+	return Routes.logout(c, util, db, cookie);
 })
 
 .get('/register', async(c) => {

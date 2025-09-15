@@ -22,10 +22,10 @@ export const erase = {
 		);
 	},
 
-	allDevices: async(conn, accountId, sessionId) => {
+	allDevices: async(conn, accountId, exceptThisSessionId) => {
 		await conn.queryArray(
 			'DELETE FROM sessions WHERE account_id = $1 AND id != $2',
-			[accountId, sessionId]
+			[accountId, exceptThisSessionId]
 		);
 	}
 

@@ -1,8 +1,11 @@
-export default async(c, util, cookie, db) => {
+export default async(c, util, db, cookie) => {
 	const sessionId = await cookie.get(c);
 
-	await db.session.erase.thisDevice(sessionId);
+	const conn = await db.getConn();
+	await db.session.erase.thisDevice(conn, sessionId);
+
 	await cookie.destroy(c);
+	conn.release();
 
 	return c.redirect('/');
 }

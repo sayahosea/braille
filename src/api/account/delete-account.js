@@ -1,4 +1,4 @@
-export default async(c, util, cookie, db) => {
+export default async(c, util, db, cookie) => {
 	try {
 		const accountId = c.account.id;
 

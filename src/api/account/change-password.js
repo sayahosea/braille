@@ -1,22 +1,35 @@
 const required = ['password'];
 
-export default async(c, util, cookie, db) => {
+export default async(c, util, db) => {
+	let conn;
+
 	try {
 		const body = await c.req.json();
 
-		const bodyValid = util.validateBody(required, Object.keys(body));
-		if (!bodyValid) return c.text('body request is not valid :[', 400);
+		if (!util.validate.body(required, Object.keys(body))) {
+			return error(c, 'Invalid body request.');
+		}
 
 		const { password } = body;
-		const valid = util.validateValue.password(password);
-		if (!valid) return c.text('your password either too long or too short :[', 400);
+		if (!util.validate.password(password)) {
+			return error(c, 'Your password either too long or too short.');
+		}
 
 		const hashedPassword = await util.password.hash(password);
-		await db.account.update.password(hashedPassword, c.account.id);
+		conn = await db.getConn();
 
-		return c.text("Your password has been changed", 200);
+		await db.account.update.password(conn, hashedPassword, c.account.id);
+
+		return c.text('Your password has been changed.', 200);
 	} catch(err) {
 		console.error(err.stack);
-		return c.text('server error, sowwy :[', 500);
+		if (conn) conn.release();
+		return c.text('Server error.', 500);
+	} finally {
+		if (conn) conn.release();
 	}
+}
+
+function error(c, text) {
+	return c.text(text, 400);
 }

@@ -61,7 +61,22 @@ export const password = {
 }
 
 const usernameRegex = /^[a-zA-Z0-9_]+$/;
-export const validateValue = {
+export const validate = {
+
+	body: (required, body) => {
+		if (required.length !== body.length) return false;
+
+		let result = true;
+
+		for (let key of body) {
+			if (!required.includes(key)) {
+				result = false;
+				break;
+			}
+		}
+
+		return result;
+	},
 
 	username: (str) => {
 		if (str.length < 3 || str.length > 16) return false;

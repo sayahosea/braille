@@ -1,21 +1,29 @@
 const required = ['username'];
 
-export default async(c, util, cookie, db) => {
+export default async(c, util, db) => {
+	let conn;
+
 	try {
 		const body = await c.req.json();
 
-		const bodyValid = util.validateBody(required, Object.keys(body));
-		if (!bodyValid) return c.text('body request is not valid :[', 400);
+		if (!util.validate.body(required, Object.keys(body))) {
+			return error(c, 'Invalid body request.');
+		}
 
 		const { username } = body;
-		const valid = util.validateValue.username(username);
-		if (!valid) return c.text('your new username is not valid, sowwy :[', 400);
+		if (!util.validate.username(username)) {
+			return error(c, 'Your new username is not valid.');
+		}
 
-		await db.account.update.username(username, c.account.id);
+		conn = await db.getConn();
+		await db.account.update.username(conn, username, c.account.id);
 
-		return c.text("Your username has been changed", 200);
+		return c.text('Your username has been changed', 200);
 	} catch(err) {
 		console.error(err.stack);
-		return c.text('server error, sowwy :[', 500);
+		if (conn) conn.release();
+		return c.text('Server error.', 500);
+	} finally {
+		if (conn) conn.release();
 	}
 }
