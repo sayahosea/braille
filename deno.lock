@@ -1,12 +1,10 @@
 {
   "version": "5",
   "specifiers": {
-    "jsr:@db/postgres@*": "0.19.5",
     "jsr:@db/postgres@~0.19.5": "0.19.5",
     "jsr:@denosaurs/plug@^1.1.0": "1.1.0",
     "jsr:@eta-dev/eta@*": "3.5.0",
     "jsr:@eta-dev/eta@^3.5.0": "3.5.0",
-    "jsr:@felix/argon2@*": "3.0.2",
     "jsr:@felix/argon2@^3.0.2": "3.0.2",
     "jsr:@std/bytes@^1.0.5": "1.0.6",
     "jsr:@std/crypto@^1.0.4": "1.0.5",
@@ -18,14 +16,12 @@
     "jsr:@std/fs@1": "1.0.19",
     "jsr:@std/internal@^1.0.10": "1.0.10",
     "jsr:@std/internal@^1.0.9": "1.0.10",
-    "jsr:@std/path@*": "1.1.2",
     "jsr:@std/path@1": "1.1.2",
     "jsr:@std/path@^1.0.8": "1.1.2",
-    "jsr:@std/path@^1.1.0": "1.1.2",
     "jsr:@std/path@^1.1.1": "1.1.2",
+    "jsr:@std/path@^1.1.2": "1.1.2",
     "npm:@types/node@*": "24.2.0",
-    "npm:hono@*": "4.9.6",
-    "npm:hono@^4.8.3": "4.9.6"
+    "npm:hono@^4.9.9": "4.9.9"
   },
   "jsr": {
     "@db/postgres@0.19.5": {
@@ -95,8 +91,8 @@
         "undici-types"
       ]
     },
-    "hono@4.9.6": {
-      "integrity": "sha512-doVjXhSFvYZ7y0dNokjwwSahcrAfdz+/BCLvAMa/vHLzjj8+CFyV5xteThGUsKdkaasgN+gF2mUxao+SGLpUeA=="
+    "hono@4.9.9": {
+      "integrity": "sha512-Hxw4wT6zjJGZJdkJzAx9PyBdf7ZpxaTSA0NfxqjLghwMrLBX8p33hJBzoETRakF3UJu6OdNQBZAlNSkGqKFukw=="
     },
     "undici-types@7.10.0": {
       "integrity": "sha512-t5Fy/nfn+14LuOc2KNYg75vZqClpAiqscVvMygNnlsHBFpSXdJaYtXMcdNLpl/Qvc3P2cB3s6lOV51nqsFq4ag=="
@@ -107,8 +103,8 @@
       "jsr:@db/postgres@~0.19.5",
       "jsr:@eta-dev/eta@^3.5.0",
       "jsr:@felix/argon2@^3.0.2",
-      "jsr:@std/path@^1.1.0",
-      "npm:hono@^4.8.3"
+      "jsr:@std/path@^1.1.2",
+      "npm:hono@^4.9.9"
     ]
   }
 }
