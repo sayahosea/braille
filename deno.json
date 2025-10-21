@@ -8,6 +8,6 @@
 		"@eta-dev/eta": "jsr:@eta-dev/eta@^3.5.0",
 		"@felix/argon2": "jsr:@felix/argon2@^3.0.2",
 		"@std/path": "jsr:@std/path@^1.1.2",
-		"hono": "npm:hono@^4.9.9"
+		"hono": "npm:hono@^4.10.1"
 	}
 }

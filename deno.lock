@@ -21,7 +21,7 @@
     "jsr:@std/path@^1.1.1": "1.1.2",
     "jsr:@std/path@^1.1.2": "1.1.2",
     "npm:@types/node@*": "24.2.0",
-    "npm:hono@^4.9.9": "4.9.9"
+    "npm:hono@^4.10.1": "4.10.1"
   },
   "jsr": {
     "@db/postgres@0.19.5": {
@@ -91,8 +91,8 @@
         "undici-types"
       ]
     },
-    "hono@4.9.9": {
-      "integrity": "sha512-Hxw4wT6zjJGZJdkJzAx9PyBdf7ZpxaTSA0NfxqjLghwMrLBX8p33hJBzoETRakF3UJu6OdNQBZAlNSkGqKFukw=="
+    "hono@4.10.1": {
+      "integrity": "sha512-rpGNOfacO4WEPClfkEt1yfl8cbu10uB1lNpiI33AKoiAHwOS8lV748JiLx4b5ozO/u4qLjIvfpFsPXdY5Qjkmg=="
     },
     "undici-types@7.10.0": {
       "integrity": "sha512-t5Fy/nfn+14LuOc2KNYg75vZqClpAiqscVvMygNnlsHBFpSXdJaYtXMcdNLpl/Qvc3P2cB3s6lOV51nqsFq4ag=="
@@ -104,7 +104,7 @@
       "jsr:@eta-dev/eta@^3.5.0",
       "jsr:@felix/argon2@^3.0.2",
       "jsr:@std/path@^1.1.2",
-      "npm:hono@^4.9.9"
+      "npm:hono@^4.10.1"
     ]
   }
 }
