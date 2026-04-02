@@ -1,6 +1,6 @@
 import 'jsr:@std/dotenv/load';
-import { Hono } from 'npm:hono';
-import { serveStatic } from 'npm:hono/deno';
+import { Hono } from '@hono/hono';
+import { serveStatic } from '@hono/hono/deno';
 
 import * as util from './handlers/Util.js';
 import * as cookie from './handlers/Cookie.js';

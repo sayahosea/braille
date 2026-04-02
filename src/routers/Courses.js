@@ -1,4 +1,4 @@
-import { Hono } from 'npm:hono';
+import { Hono } from '@hono/hono';
 
 import * as util from '../handlers/Util.js';
 import * as cookie from '../handlers/Cookie.js';

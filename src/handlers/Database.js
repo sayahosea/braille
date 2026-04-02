@@ -56,9 +56,12 @@ async function createTables() {
 			account_id UUID
 		);`);
 	} catch(err) {
-		console.log(`[!] Database error: ${err.message}`);
+		console.error(`[!] Database error: ${err.message}`);
+
 		if (client) client.release();
+
+		process.exit(1);
 	} finally {
-		client.release();
+		if (client) client.release();
 	}
 }
