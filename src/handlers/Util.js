@@ -1,4 +1,4 @@
-import { Eta } from 'jsr:@eta-dev/eta';
+import { Eta } from 'jsr:@bgub/eta';
 import { randomBytes, randomUUID } from 'node:crypto';
 import { Buffer } from 'node:buffer';
 import { hash, verify, Variant } from 'jsr:@felix/argon2';
@@ -39,7 +39,6 @@ export const validateBody = (required, body) => {
 }
 
 export const password = {
-
 	hash: async(plainPassword) => {
 		const salt = crypto.getRandomValues(new Uint8Array(20));
 
@@ -50,16 +49,13 @@ export const password = {
 			salt
 		});
 	},
-
 	verify: async(hash, plainPassword) => {
 		return await verify(hash, plainPassword);
 	}
-
 }
 
 const usernameRegex = /^[a-zA-Z0-9_]+$/;
 export const validate = {
-
 	body: (required, body) => {
 		if (required.length !== body.length) return false;
 
@@ -74,7 +70,6 @@ export const validate = {
 
 		return result;
 	},
-
 	username: (str) => {
 		if (str.length < 3 || str.length > 16) return false;
 		if (!usernameRegex.test(str.value)) return false;
@@ -84,7 +79,6 @@ export const validate = {
 	password: (str) => {
 		return str.length >= 3 && str.length <= 64;
 	}
-
 }
 
 export const generate = {

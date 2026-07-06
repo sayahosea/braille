@@ -1,29 +1,29 @@
 {
   "version": "5",
   "specifiers": {
-    "jsr:@db/postgres@*": "0.19.5",
+    "jsr:@bgub/eta@^4.6.0": "4.6.0",
     "jsr:@db/postgres@~0.19.5": "0.19.5",
     "jsr:@denosaurs/plug@^1.1.0": "1.1.0",
-    "jsr:@eta-dev/eta@*": "3.5.0",
-    "jsr:@eta-dev/eta@^3.5.0": "3.5.0",
-    "jsr:@felix/argon2@*": "3.0.5",
-    "jsr:@felix/argon2@^3.0.5": "3.0.5",
-    "jsr:@hono/hono@^4.12.15": "4.12.15",
+    "jsr:@felix/argon2@^3.0.6": "3.0.6",
+    "jsr:@hono/hono@^4.12.27": "4.12.27",
     "jsr:@std/bytes@^1.0.5": "1.0.6",
-    "jsr:@std/crypto@^1.0.4": "1.0.5",
+    "jsr:@std/crypto@^1.0.4": "1.1.0",
     "jsr:@std/dotenv@*": "0.225.5",
-    "jsr:@std/encoding@1": "1.0.10",
-    "jsr:@std/encoding@^1.0.9": "1.0.10",
-    "jsr:@std/fmt@1": "1.0.9",
-    "jsr:@std/fmt@^1.0.6": "1.0.9",
-    "jsr:@std/fs@1": "1.0.23",
-    "jsr:@std/internal@^1.0.12": "1.0.12",
-    "jsr:@std/path@*": "1.1.4",
-    "jsr:@std/path@1": "1.1.4",
-    "jsr:@std/path@^1.0.8": "1.1.4",
-    "jsr:@std/path@^1.1.4": "1.1.4"
+    "jsr:@std/encoding@1": "1.0.11",
+    "jsr:@std/encoding@^1.0.9": "1.0.11",
+    "jsr:@std/fmt@1": "1.0.10",
+    "jsr:@std/fmt@^1.0.6": "1.0.10",
+    "jsr:@std/fs@1": "1.0.24",
+    "jsr:@std/internal@^1.0.14": "1.0.14",
+    "jsr:@std/path@1": "1.1.6",
+    "jsr:@std/path@^1.0.8": "1.1.6",
+    "jsr:@std/path@^1.1.5": "1.1.6",
+    "jsr:@std/path@^1.1.6": "1.1.6"
   },
   "jsr": {
+    "@bgub/eta@4.6.0": {
+      "integrity": "fe872004cd6c64ca25c7e71fd80bbbad7d8d552cefd31828bddddb7db0f79eb1"
+    },
     "@db/postgres@0.19.5": {
       "integrity": "afdbe608bd066cda2ee5dba37c416d332098b9238c51aec223331108e281954c",
       "dependencies": [
@@ -43,45 +43,42 @@
         "jsr:@std/path@1"
       ]
     },
-    "@eta-dev/eta@3.5.0": {
-      "integrity": "6b70827efc14c7cbf08498ac7a922ecab003641caf3852a6cb5b1b12ee58fb37"
-    },
-    "@felix/argon2@3.0.5": {
-      "integrity": "f016186f0b9c68f6b18c46a665f38f3a208252b4a080d8ad3a5b5e98095f9d59",
+    "@felix/argon2@3.0.6": {
+      "integrity": "8480d5cbdacf1baa7acd07fcffed8780aaa158e420c41eef8f2fdd824846a2fe",
       "dependencies": [
         "jsr:@denosaurs/plug"
       ]
     },
-    "@hono/hono@4.12.15": {
-      "integrity": "06a0aef73d9072e73b8db570b81a5b56a94095d697578202a87fccdf04ce352d"
+    "@hono/hono@4.12.27": {
+      "integrity": "3acc640592008e43f7048e8e53275203e0da84fbcd50201121195da7560583dc"
     },
     "@std/bytes@1.0.6": {
       "integrity": "f6ac6adbd8ccd99314045f5703e23af0a68d7f7e58364b47d2c7f408aeb5820a"
     },
-    "@std/crypto@1.0.5": {
-      "integrity": "0dcfbb319fe0bba1bd3af904ceb4f948cde1b92979ec1614528380ed308a3b40"
+    "@std/crypto@1.1.0": {
+      "integrity": "b8d6d0a6377a32b213af2661ed7bf1062d94feac0c57def5526a8e74a95c3ec8"
     },
     "@std/dotenv@0.225.5": {
       "integrity": "9ce6f9d0ec3311f74a32535aa1b8c62ed88b1ab91b7f0815797d77a6f60c922f"
     },
-    "@std/encoding@1.0.10": {
-      "integrity": "8783c6384a2d13abd5e9e87a7ae0520a30e9f56aeeaa3bdf910a3eaaf5c811a1"
+    "@std/encoding@1.0.11": {
+      "integrity": "e7cef2f0b3153bccc17431e7c864a1de03a4b6d9647389c43e08aaa775d37385"
     },
-    "@std/fmt@1.0.9": {
-      "integrity": "2487343e8899fb2be5d0e3d35013e54477ada198854e52dd05ed0422eddcabe0"
+    "@std/fmt@1.0.10": {
+      "integrity": "90dfba288802ac6de82fb31d0917eb9e4450b9925b954d5e51fc29ac07419db5"
     },
-    "@std/fs@1.0.23": {
-      "integrity": "3ecbae4ce4fee03b180fa710caff36bb5adb66631c46a6460aaad49515565a37",
+    "@std/fs@1.0.24": {
+      "integrity": "f3061b45b81673a2bece689da041df32d174be064c89eb6397fb5718d3fb7877",
       "dependencies": [
         "jsr:@std/internal",
-        "jsr:@std/path@^1.1.4"
+        "jsr:@std/path@^1.1.5"
       ]
     },
-    "@std/internal@1.0.12": {
-      "integrity": "972a634fd5bc34b242024402972cd5143eac68d8dffaca5eaa4dba30ce17b027"
+    "@std/internal@1.0.14": {
+      "integrity": "291516b3d4c35024d6ffbc0a9df5bf4c64116e05b50012cf846710152d2ffdf7"
     },
-    "@std/path@1.1.4": {
-      "integrity": "1d2d43f39efb1b42f0b1882a25486647cb851481862dc7313390b2bb044314b5",
+    "@std/path@1.1.6": {
+      "integrity": "c68485c2a4dfbb5ae3cc74fae4e8c4e5d874cf8a8ed12927917235c758b46cbe",
       "dependencies": [
         "jsr:@std/internal"
       ]
@@ -89,11 +86,11 @@
   },
   "workspace": {
     "dependencies": [
+      "jsr:@bgub/eta@^4.6.0",
       "jsr:@db/postgres@~0.19.5",
-      "jsr:@eta-dev/eta@^3.5.0",
-      "jsr:@felix/argon2@^3.0.5",
-      "jsr:@hono/hono@^4.12.15",
-      "jsr:@std/path@^1.1.4"
+      "jsr:@felix/argon2@^3.0.6",
+      "jsr:@hono/hono@^4.12.27",
+      "jsr:@std/path@^1.1.6"
     ]
   }
 }

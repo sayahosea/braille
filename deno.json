@@ -4,10 +4,10 @@
 		"start": "deno run --allow-net --allow-read --allow-write --allow-ffi --allow-env src/main.js"
 	},
 	"imports": {
+		"@bgub/eta": "jsr:@bgub/eta@^4.6.0",
 		"@db/postgres": "jsr:@db/postgres@^0.19.5",
-		"@eta-dev/eta": "jsr:@eta-dev/eta@^3.5.0",
-		"@felix/argon2": "jsr:@felix/argon2@^3.0.5",
-		"@hono/hono": "jsr:@hono/hono@^4.12.15",
-		"@std/path": "jsr:@std/path@^1.1.4"
+		"@felix/argon2": "jsr:@felix/argon2@^3.0.6",
+		"@hono/hono": "jsr:@hono/hono@^4.12.27",
+		"@std/path": "jsr:@std/path@^1.1.6"
 	}
 }
