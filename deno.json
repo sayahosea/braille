@@ -7,7 +7,7 @@
 		"@bgub/eta": "jsr:@bgub/eta@^4.6.0",
 		"@db/postgres": "jsr:@db/postgres@^0.19.5",
 		"@felix/argon2": "jsr:@felix/argon2@^3.0.6",
-		"@hono/hono": "jsr:@hono/hono@^4.12.27",
+		"@hono/hono": "jsr:@hono/hono@^4.13.4",
 		"@std/path": "jsr:@std/path@^1.1.6"
 	}
 }

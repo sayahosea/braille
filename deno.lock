@@ -5,7 +5,7 @@
     "jsr:@db/postgres@~0.19.5": "0.19.5",
     "jsr:@denosaurs/plug@^1.1.0": "1.1.0",
     "jsr:@felix/argon2@^3.0.6": "3.0.6",
-    "jsr:@hono/hono@^4.12.27": "4.12.27",
+    "jsr:@hono/hono@^4.13.4": "4.13.4",
     "jsr:@std/bytes@^1.0.5": "1.0.6",
     "jsr:@std/crypto@^1.0.4": "1.1.0",
     "jsr:@std/dotenv@*": "0.225.5",
@@ -49,8 +49,8 @@
         "jsr:@denosaurs/plug"
       ]
     },
-    "@hono/hono@4.12.27": {
-      "integrity": "3acc640592008e43f7048e8e53275203e0da84fbcd50201121195da7560583dc"
+    "@hono/hono@4.13.4": {
+      "integrity": "c74fdcc6f75424a78512c49098017fd3ffb104a33e45c8c49ec9b5faa56efc03"
     },
     "@std/bytes@1.0.6": {
       "integrity": "f6ac6adbd8ccd99314045f5703e23af0a68d7f7e58364b47d2c7f408aeb5820a"
@@ -89,7 +89,7 @@
       "jsr:@bgub/eta@^4.6.0",
       "jsr:@db/postgres@~0.19.5",
       "jsr:@felix/argon2@^3.0.6",
-      "jsr:@hono/hono@^4.12.27",
+      "jsr:@hono/hono@^4.13.4",
       "jsr:@std/path@^1.1.6"
     ]
   }
